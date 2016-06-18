@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rdbCivel = new System.Windows.Forms.RadioButton();
             this.rdbCriminal = new System.Windows.Forms.RadioButton();
@@ -36,7 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnlimpar = new System.Windows.Forms.Button();
             this.btnsair = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.datagridconsulta = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridconsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPesquisar
@@ -108,7 +110,7 @@
             // 
             // btnsair
             // 
-            this.btnsair.Location = new System.Drawing.Point(356, 340);
+            this.btnsair.Location = new System.Drawing.Point(822, 348);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(75, 23);
             this.btnsair.TabIndex = 8;
@@ -116,25 +118,34 @@
             this.btnsair.UseVisualStyleBackColor = true;
             this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
-            // listBox1
+            // datagridconsulta
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "tes",
-            "fheh",
-            "eddn",
-            "end /n hfhd"});
-            this.listBox1.Location = new System.Drawing.Point(15, 134);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(374, 173);
-            this.listBox1.TabIndex = 9;
+            this.datagridconsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridconsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.datagridconsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridconsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridconsulta.Enabled = false;
+            this.datagridconsulta.Location = new System.Drawing.Point(20, 131);
+            this.datagridconsulta.Name = "datagridconsulta";
+            this.datagridconsulta.RowHeadersVisible = false;
+            this.datagridconsulta.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.datagridconsulta.Size = new System.Drawing.Size(891, 150);
+            this.datagridconsulta.TabIndex = 9;
             // 
             // FrmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 383);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(923, 383);
+            this.Controls.Add(this.datagridconsulta);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.label2);
@@ -150,6 +161,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KaySoft - Consultas do Distribuidor - Guarujá";
             this.Load += new System.EventHandler(this.FrmConsulta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridconsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +177,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnlimpar;
         private System.Windows.Forms.Button btnsair;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView datagridconsulta;
     }
 }
 
