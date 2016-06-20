@@ -18,22 +18,21 @@ namespace PrjForumDistriCSharp
 
         public void BancoConsulta()
         {
-            string strcon = "Server=tcp:kaysoft.database.windows.net,1433;Data Source=kaysoft.database.windows.net;Initial Catalog=DistribuidorGuaruja;Persist Security Info=False;User ID=kayanfds;Password=Kayas190393;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             SqlConnection conexao = new SqlConnection(strcon);
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
 
             if(rdbcivel.Checked && rdbnome.Checked)
             {
-                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de Distribuição\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"Observação\" from dbo.FichaCivel where nm_requerido = '" + txtnome.Text + "'";
+                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de DistribuiÃ§Ã£o\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"ObservaÃ§Ã£o\" from dbo.FichaCivel where nm_requerido = '" + txtnome.Text + "'";
             }
             if (rdbcivel.Checked && rdbdatadistri.Checked)
             {
-                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de Distribuição\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"Observação\" from dbo.FichaCivel where dt_distribuicao = '" + dtpDistribuicao.Value.ToString("yyyyMMdd") + "'";
+                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de DistribuiÃ§Ã£o\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"ObservaÃ§Ã£o\" from dbo.FichaCivel where dt_distribuicao = '" + dtpDistribuicao.Value.ToString("yyyyMMdd") + "'";
             }
             if(rdbcriminal.Checked && rdbnome.Checked)
             {
-                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de Distribuição\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"Observação\" from dbo.FichaCivel where nm_requerido = '" + txtnome.Text + "'";
+                selectnobanco = "Select nm_requerido as \"Requerido\", nm_requerente as \"Requerente\", dt_distribuicao as \"Data de DistribuiÃ§Ã£o\", nm_natureza as \"Natureza\", nm_oficio as \"Oficio\", vl_valor as \"Valor\", nm_observacao as \"ObservaÃ§Ã£o\" from dbo.FichaCivel where nm_requerido = '" + txtnome.Text + "'";
             }
             if(rdbcriminal.Checked && rdbdatadistri.Checked)
             {
@@ -92,7 +91,7 @@ namespace PrjForumDistriCSharp
 
         private void rdbdatadistri_CheckedChanged(object sender, EventArgs e)
         {
-            lblcheck.Text = "Digite a data de Distribuição:";
+            lblcheck.Text = "Digite a data de DistribuiÃ§Ã£o:";
             txtnome.Visible = false;
             dtpDistribuicao.Visible = true;
         }
